@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 import { createCustomException } from '../exceptions/custom-exception';
 import { validateData } from '../validators/data-validator';
-import IdTechnicalSkills, { IIdTechnicalSkills } from '../models/IdTechnicalSkills';
+import IdTechnicalSkills, { IIdTechnicalSkills } from '../models/idTechnicalSkills';
 
 export const postTechnicalSkills = async (req: Request, res: Response, next: NextFunction) => {
 	const technicalSkillsData: IIdTechnicalSkills = req.body;

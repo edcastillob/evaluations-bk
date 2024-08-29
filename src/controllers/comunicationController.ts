@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import { createCustomException } from '../exceptions/custom-exception';
-import Comunication, { IComunication } from '../models/Comunication';
+import Comunication, { IComunication } from '../models/comunication';
 import { validateData } from '../validators/data-validator';
 
 export const postComunication = async (req: Request, res: Response, next: NextFunction) => {

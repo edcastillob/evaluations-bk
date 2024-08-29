@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 import { createCustomException } from '../exceptions/custom-exception';
 import { validateData } from '../validators/data-validator';
-import TimeManagement, { ITimeManagement } from '../models/TimeManagement';
+import TimeManagement, { ITimeManagement } from '../models/timeManagement';
 
 export const postTimeManagement = async (req: Request, res: Response, next: NextFunction) => {
 	const timeManagementData: ITimeManagement = req.body;

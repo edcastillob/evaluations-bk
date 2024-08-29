@@ -1,6 +1,6 @@
 import jwt, { JwtPayload } from 'jsonwebtoken';
 import { Request, Response, NextFunction } from 'express';
-import User, { IUser } from '../models/User';
+import User, { IUser } from '../models/user';
 import { createCustomException } from '../exceptions/custom-exception';
 
 interface AuthenticatedRequest extends Request {

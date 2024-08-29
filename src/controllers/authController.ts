@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import User, { IUser } from '../models/User';
+import User, { IUser } from '../models/user';
 import { generateToken } from '../utils/generateToken';
 import { validateUserData } from '../validators/user-validator';
 import { createCustomException } from '../exceptions/custom-exception';

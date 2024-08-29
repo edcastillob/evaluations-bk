@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 import { createCustomException } from '../exceptions/custom-exception';
 import { validateData } from '../validators/data-validator';
-import Adaptability, { IAdaptability } from '../models/Adaptability';
+import Adaptability, { IAdaptability } from '../models/adaptability';
 
 export const postAdaptability = async (req: Request, res: Response, next: NextFunction) => {
 	const adaptabilityData: IAdaptability = req.body;
