@@ -1,0 +1,34 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const authRoutes_1 = __importDefault(require("./authRoutes"));
+const comunicationRoutes_1 = __importDefault(require("./comunicationRoutes"));
+const teamworkRoutes_1 = __importDefault(require("./teamworkRoutes"));
+const adaptabilityRoutes_1 = __importDefault(require("./adaptabilityRoutes"));
+const technicalSkillsRoutes_1 = __importDefault(require("./technicalSkillsRoutes"));
+const softSkillsRoutes_1 = __importDefault(require("./softSkillsRoutes"));
+const timeManagementRoutes_1 = __importDefault(require("./timeManagementRoutes"));
+const evaluationRoutes_1 = __importDefault(require("./evaluationRoutes"));
+const userRoutes_1 = __importDefault(require("./userRoutes"));
+const feedbackRoutes_1 = __importDefault(require("./feedbackRoutes"));
+const statsRoutes_1 = __importDefault(require("./statsRoutes"));
+const router = express_1.default.Router();
+router.use('/auth', authRoutes_1.default);
+router.use('/employees', userRoutes_1.default);
+router.use('/user', userRoutes_1.default);
+router.use('/stats', statsRoutes_1.default);
+router.use('/reports', userRoutes_1.default);
+router.use('/adaptability', adaptabilityRoutes_1.default);
+router.use('/adaptability', adaptabilityRoutes_1.default);
+router.use('/comunication', comunicationRoutes_1.default);
+router.use('/soft-skills', softSkillsRoutes_1.default);
+router.use('/teamwork', teamworkRoutes_1.default);
+router.use('/technical-skills', technicalSkillsRoutes_1.default);
+router.use('/time-management', timeManagementRoutes_1.default);
+router.use('/evaluation', evaluationRoutes_1.default);
+router.use('/feedback', feedbackRoutes_1.default);
+exports.default = router;
+//# sourceMappingURL=index.js.map

@@ -22,9 +22,9 @@ app.use(express.json());
 app.use(morgan('dev'));
 app.use(cors());
 connectDB();
-// app.get('/', (req, res) => {
-// 	res.status(200).send({ message: 'Hello Word!' });
-// });
+app.get('/', (req, res) => {
+	res.status(200).send({ message: 'Hello Word!' });
+});
 
 app.use('/api', routes);
 app.use(errorHandler);

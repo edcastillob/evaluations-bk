@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import { createCustomException } from '../exceptions/custom-exception';
-import Teamwork, { ITeamwork } from '../models/teamwork';
+import Teamwork, { ITeamwork } from '../models/Teamwork';
 import { validateData } from '../validators/data-validator';
 
 export const postTeamwork = async (req: Request, res: Response, next: NextFunction) => {

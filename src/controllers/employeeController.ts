@@ -1,11 +1,11 @@
 import { Request, Response, NextFunction } from 'express';
-import User, { IUser } from '../models/user';
+import User, { IUser } from '../models/User';
 import { createCustomException } from '../exceptions/custom-exception';
 import { isValidObjectId } from '../utils/valid-object-id';
 import { validatePutUserData } from '../validators/put-user-validator';
 import cloudinary from '../utils/cloudinary';
-import Evaluation from '../models/evaluation';
-import Feedback from '../models/feedback';
+import Evaluation from '../models/Evaluation';
+import Feedback from '../models/Feedback';
 
 export const getAllEmployees = async (req: Request, res: Response, next: NextFunction) => {
 	console.log(1000);

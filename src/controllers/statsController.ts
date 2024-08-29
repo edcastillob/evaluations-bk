@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
-import User from '../models/user';
-import Evaluation from '../models/evaluation';
+import User from '../models/User';
+import Evaluation from '../models/Evaluation';
 
 export const getStats = async (req: Request, res: Response, next: NextFunction) => {
 	try {

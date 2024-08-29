@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 import { createCustomException } from '../exceptions/custom-exception';
 import { validateData } from '../validators/data-validator';
-import SoftSkills, { ISoftSkills } from '../models/softSkills';
+import SoftSkills, { ISoftSkills } from '../models/SoftSkills';
 
 export const postsoftSkills = async (req: Request, res: Response, next: NextFunction) => {
 	const softSkillsData: ISoftSkills = req.body;

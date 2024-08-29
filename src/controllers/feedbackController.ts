@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import { createCustomException } from '../exceptions/custom-exception';
-import Feedback, { IFeedback } from '../models/feedback';
+import Feedback, { IFeedback } from '../models/Feedback';
 import { validateFeedbackData } from '../validators/feedback-validator';
 import { isValidObjectId } from '../utils/valid-object-id';
 

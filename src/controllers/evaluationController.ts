@@ -1,15 +1,15 @@
 import { Request, Response, NextFunction } from 'express';
 import { createCustomException } from '../exceptions/custom-exception';
+import Evaluation, { IEvaluation } from '../models/Evaluation';
 import { validateEvaluationData } from '../validators/evaluation-validator';
-import Adaptability from '../models/adaptability';
-import User from '../models/user';
-import IdTechnicalSkills from '../models/idTechnicalSkills';
-import Comunication from '../models/comunication';
-import Teamwork from '../models/teamwork';
-import TimeManagement from '../models/timeManagement';
-import SoftSkills from '../models/softSkills';
+import Adaptability from '../models/Adaptability';
+import User from '../models/User';
+import IdTechnicalSkills from '../models/IdTechnicalSkills';
+import Comunication from '../models/Comunication';
+import Teamwork from '../models/Teamwork';
+import TimeManagement from '../models/TimeManagement';
+import SoftSkills from '../models/SoftSkills';
 import { isValidObjectId } from '../utils/valid-object-id';
-import Evaluation, { IEvaluation } from 'models/evaluation';
 
 export const postEvaluation = async (req: Request, res: Response, next: NextFunction) => {
 	const EvaluationData: IEvaluation = req.body;
@@ -45,6 +45,7 @@ export const getEvaluationById = async (req: Request, res: Response, next: NextF
 		next(error);
 	}
 };
+
 export const viewAllEvaluation = async (req: Request, res: Response, next: NextFunction) => {
 	try {
 	  const evaluations = await Evaluation.find()
@@ -60,6 +61,7 @@ export const viewAllEvaluation = async (req: Request, res: Response, next: NextF
 	  next(error);
 	}
   };
+
 export const getEvaluationByUser = async (req: Request, res: Response, next: NextFunction) => {
 	const { employeeId } = req.params;
 	try {
